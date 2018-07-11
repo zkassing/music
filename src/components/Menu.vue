@@ -1,5 +1,5 @@
 <template>
-  <mu-appbar style="width: 100%;" color="primary">
+  <mu-appbar style="width: 100%;" color="teal">
     <mu-button icon slot="left" @click.native="back">
       <mu-icon value="arrow_back"></mu-icon>
     </mu-button>
