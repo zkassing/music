@@ -8,6 +8,7 @@ import 'muse-ui/dist/muse-ui.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Vuex from 'vuex'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -15,12 +16,13 @@ Vue.use(VueAxios, axios)
 Vue.use(MuseUI)
 Vue.use(Vuex)
 
-axios.defaults.baseURL = 'http://localhost:3000'
+axios.defaults.baseURL = process.env.ROOT_URL
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <router-view/>
+    <audio autoplay>
+      <source src="">
+    </audio>
   </div>
 </template>
 
@@ -8,6 +11,7 @@
 export default {
   name: 'App',
   components: {
+    
   }
 }
 </script>
