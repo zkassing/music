@@ -48,13 +48,16 @@ export default {
     },
     changePlayStatus () {
       // this.play_status = this.play_status === "play_arrow" ? 'pause' : 'play_arrow'
-      if(this.play_status === 'pause') {
-        this.play_status = 'play_arrow'
-        this.audio.pause()
-      }else{
-        this.play_status = 'pause'
-        this.audio.play()
+      if(this.player.play_url) {
+        if(this.play_status === 'pause') {
+          this.play_status = 'play_arrow'
+          this.audio.pause()
+        }else{
+          this.play_status = 'pause'
+          this.audio.play()
+        }
       }
+      
 
     }
   },

@@ -66,6 +66,19 @@ const actions = {
       // console.log(url)
       commit('setPlayUrl', url)
     }
+  },
+  async getSongDetail ({commit}, id) {
+    let result = await Vue.axios.get('/song/detail', {params: {
+      ids: id
+    }})
+    // console.log(result)
+    // const song = {name, picUrl} = result.data.songs[0]
+    result = result.data.songs[0]
+    const song = {
+      name: result.name,
+      picUrl: result.al.picUrl
+    }
+    commit('setPlayer', song)
   }
 }
 
