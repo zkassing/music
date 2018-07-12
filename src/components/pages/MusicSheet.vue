@@ -7,6 +7,9 @@
             <mu-icon value="arrow_back"></mu-icon>
           </mu-button>
             音乐
+          <mu-button icon slot="right" to="/search">
+            <mu-icon value="search"></mu-icon>
+          </mu-button>
         </mu-appbar>
         
       </mu-col>

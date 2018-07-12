@@ -2,7 +2,7 @@
   <mu-flex class="music_control" direction="column" justify-content="between">
     <mu-linear-progress mode="determinate" :value="progress" :max="duration" color="secondary"></mu-linear-progress>
     <mu-flex class="music_info" align-items="center">
-      <mu-avatar v-if="player.picUrl">
+      <mu-avatar v-if="player.picUrl" class="avatar">
         <img :src="player.picUrl">
       </mu-avatar>
       <mu-button v-else fab small color="#e91e63">
@@ -83,5 +83,16 @@ export default {
   }
   .name {
     margin-left: 16px;
+  }
+  .avatar {
+    animation: rotate 20s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 </style>
