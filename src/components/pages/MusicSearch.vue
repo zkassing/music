@@ -6,7 +6,7 @@
       </mu-button>
       <mu-text-field @change="getMusicSuggest" v-model="keyword" full-width ></mu-text-field>
     </mu-appbar>
-    <Search :songs="songs"></Search>
+    <Search :songs="songs" v-if="songs.length"></Search>
   </mu-flex>
   
 </template>
